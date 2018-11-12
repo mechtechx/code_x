@@ -1,33 +1,17 @@
-
-/**
- * Write a description of class STRING_OMISSION here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.Scanner;
 public class STRING_OMISSION
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class STRING_OMISSION
-     */
-    public STRING_OMISSION()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+   public static void main(String args[])
+   {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("ENTER A SENTENCE");
+      String a = sc.nextLine();
+      System.out.println("ENTER THE NUMBER FOR THE WORD U WANT TO ERASE[start=0]");
+      int b=sc.nextInt();
+      System.out.println(removeCharAt(a,b));
+   }
+   public static String removeCharAt(String s, int p) 
+   {
+      return s.substring(0,p) + s.substring(p+1);
+   }
 }
