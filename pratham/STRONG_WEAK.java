@@ -1,33 +1,40 @@
-
-/**
- * Write a description of class STRONG_WEAK here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class STRONG_WEAK
+import java.util.*;
+class STRONG_WEAK
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class STRONG_WEAK
-     */
-    public STRONG_WEAK()
+    public static void main(String args[])
     {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+        String pssw;
+        int i;
+        int c=0,p=0;
+        Scanner in=new Scanner(System.in);
+        System.out.println("ENTER PASSWORD");
+        pssw=in.next();
+        if(pssw.length()>=8)
+        {
+            for(i=0;i<pssw.length();i++)
+            {
+                char x=pssw.charAt(i);
+                if(Character.isLetter(x))
+                {
+                   p=1; 
+                }
+                if(Character.isDigit(x))
+                {
+                    c=1;
+                }
+            }
+            if(c==1)
+            {
+                System.out.println("STRONG");
+            }
+            else
+            {
+                System.out.println("WEAK");
+            }
+        }
+        else
+        {
+            System.out.println("HAVE ATLEAST 8 CHARECTERS");
+        }
     }
 }
