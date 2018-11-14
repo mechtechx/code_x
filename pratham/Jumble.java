@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Jumble
+class JUMBLE
     {
         public static void main(String args[])
         {
